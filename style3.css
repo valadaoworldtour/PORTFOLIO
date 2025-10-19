@@ -1,0 +1,448 @@
+/* Variáveis de cores */
+:root {
+    --primary-color: #00336d;
+    --secondary-color: #0073e6;
+    --accent-color: #005bb5;
+    --light-color: #f8f9fa;
+    --dark-color: #333;
+    --gray-color: #e9ecef;
+    --text-color: #333;
+    --white: #fff;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Reset e estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-color);
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Navegação */
+nav {
+    background-color: var(--primary-color);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+}
+
+nav a.active {
+    background-color: var(--secondary-color);
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Seções */
+.section {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.section:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--gray-color);
+    font-size: 1.8rem;
+}
+
+/* Seção Sobre Mim */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile-image {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 20%;
+    border: 5px solid var(--gray-color);
+    box-shadow: var(--shadow);
+    background-color: var(--light-color);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Seção Experiência */
+.experience-item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gray-color);
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.experience-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.date {
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+/* Seção Habilidades */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+}
+
+.skills li {
+    flex: 1 1 150px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: var(--light-color);
+    border-radius: 8px;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.skill-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.skill-item span {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+/* Seção Cursos */
+.course-category {
+    margin-bottom: 25px;
+}
+
+.course-category h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.course-category ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.course-category li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--gray-color);
+    position: relative;
+    padding-left: 20px;
+}
+
+.course-category li:before {
+    content: "•";
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+}
+
+/* Seção Projetos */
+.project {
+    border: 1px solid var(--gray-color);
+    border-radius: 8px;
+    padding: 25px;
+    transition: var(--transition);
+}
+
+.project:hover {
+    border-color: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+.project h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.project p {
+    margin-bottom: 15px;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+    color: var(--white);
+}
+
+/* Seção Redes Sociais */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: var(--transition);
+    padding: 15px;
+    border-radius: 8px;
+    background: var(--light-color);
+    width: 120px;
+}
+
+.social-link:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+    color: var(--primary-color);
+}
+
+.social-link img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+
+/* Seção Contato */
+.contact-info {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contact-info li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--gray-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info li:last-child {
+    border-bottom: none;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid var(--gray-color);
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(0, 115, 230, 0.2);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Botão de voltar ao topo */
+#topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: none;
+    font-size: 18px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+#topBtn:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2rem;
+    }
+    
+    nav {
+        padding: 10px 0;
+    }
+    
+    nav a {
+        display: block;
+        margin: 5px 0;
+        text-align: center;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-image {
+        flex: 0 0 auto;
+    }
+    
+    .profile-image img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .skills {
+        flex-direction: column;
+    }
+    
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-link {
+        width: 100%;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 20px;
+    }
+    
+    .section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .profile-image img {
+        width: 120px;
+        height: 120px;
+    }
+}
