@@ -15,6 +15,15 @@
     <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon points="50 5, 95 25, 95 75, 50 95, 5 75, 5 25" stroke="%2300e5ff" stroke-width="5" fill="none"/><text x="50" y="65" font-size="40" text-anchor="middle" fill="%236200ea" font-family="sans-serif" font-weight="bold">MJ</text></svg>' type="image/svg+xml">
     <link rel="stylesheet" href="style3.css">
     <style>
+        /* Estilo do Subtítulo (Novo) */
+        .subtitle {
+            color: var(--tech-glow);
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top: 5px;
+        }
         /* Ajustes Específicos para Mobile (Telas menores que 768px) */
         @media (max-width: 768px) {
             /* 1. Navegação: Alinhamento vertical, centralizado e organizado */
@@ -22,14 +31,15 @@
                 padding-bottom: 15px;
             }
             header nav {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
+                display: grid;
+                grid-template-columns: 1fr 1fr; /* Divide em 2 colunas */
+                grid-template-rows: repeat(4, auto); /* Cria 4 linhas */
+                grid-auto-flow: column; /* Preenche primeiro a coluna da esquerda (1-4), depois a direita (5-8) */
                 gap: 10px;
+                padding: 0 15px;
             }
             header nav a {
-                width: 45%; /* Ajuste para 2 colunas */
+                width: 100%;
                 text-align: center;
                 padding: 10px 0;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Divisória sutil */
@@ -76,6 +86,7 @@
     <header>
         <div class="header-content">
             <h1 id="title">MAICON JUNIOR</h1>
+            <p class="subtitle">ANÁLISE E DESENVOLVIMENTO DE SISTEMAS</p>
         </div>
         <nav>
             <a href="#sobre">Sobre Mim</a>
