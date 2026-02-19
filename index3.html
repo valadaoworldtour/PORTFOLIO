@@ -11,18 +11,21 @@
     <meta property="og:image" content="link-para-imagem.jpg"> 
     <meta property="og:url" content="https://seu-portfolio.com">
     <title>Portfólio - Maicon Junior</title> 
+    <!-- Favicon: Logo Geométrico MJ (Hexágono High-Tech) -->
+    <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon points="50 5, 95 25, 95 75, 50 95, 5 75, 5 25" stroke="%2300e5ff" stroke-width="5" fill="none"/><text x="50" y="65" font-size="40" text-anchor="middle" fill="%236200ea" font-family="sans-serif" font-weight="bold">MJ</text></svg>' type="image/svg+xml">
     <link rel="stylesheet" href="style3.css">
 </head>
 <body>
+    <div id="tsparticles"></div>
     <!-- Cabeçalho com título e navegação -->
     <header>
         <div class="header-content">
             <h1 id="title">MAICON JUNIOR</h1>
-            <p>Desenvolvedor Front End</p>
         </div>
         <nav>
             <a href="#sobre">Sobre Mim</a>
             <a href="#experiencia">Experiência</a>
+            <a href="#reconhecimentos">Credenciais</a>
             <a href="#habilidades">Habilidades</a>
             <a href="#cursos">Cursos</a>
             <a href="#projetos">Projetos</a>
@@ -32,57 +35,186 @@
     </header>
 
     <div class="container">
+        <div id="portfolio-content">
         <!-- Seção Sobre Mim -->
-        <div id="sobre" class="section">
+        <div id="sobre" class="section reveal">
             <h2>Sobre Mim</h2>
             <div class="about-content">
                 <div class="profile-image">
                     <img src="img/Imagem do WhatsApp de 2025-10-19 à(s) 08.25.43_f64f6225.jpg" alt="Foto de Maicon Junior, desenvolvedor Front End">
                 </div>
                 <div class="about-text">
-                    <p>Olá! Sou Maicon Junior, e uma profunda paixão por tecnologia, viagens e aprendizado contínuo. Com uma sólida experiência em programação e comunicações, gosto de explorar novas ferramentas e técnicas para aprimorar minhas habilidades.</p>
-                    <p>Sou uma pessoa curiosa e dedicada, sempre em busca de novos desafios e oportunidades para crescer profissionalmente e pessoalmente.</p>
+                    
+                    <div class="status-badge">
+                        <span class="pulse-dot"></span> Disponível para oportunidades
+                    </div>
+
+                    <p>Olá! Sou Maicon Junior. Trago na bagagem 8 anos de experiência com tecnologia e comunicações críticas, atuando diretamente no monitoramento de sistemas complexos. Essa vivência me ensinou a ter resiliência, raciocínio lógico afiado e foco absoluto na resolução de problemas sob pressão.</p>
+                    
+                    <p>Hoje, canalizo toda essa disciplina para o <strong>Desenvolvimento de Software e Análise de Dados</strong>. Minha atuação é multidisciplinar: crio interfaces web fluidas (HTML, CSS, JS), desenvolvo lógicas de back-end e automações (Python) e transformo informações em insights estratégicos (Excel, Power BI). Sou apaixonado por conectar linhas de código e dados para construir soluções completas.</p>
+                    
+                    <div class="quick-stats">
+                        <div class="stat-item">
+                            <span class="stat-value">💻</span>
+                            <span class="stat-label">Dev & Dados</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-value">📍</span>
+                            <span class="stat-label">Planaltina-GO</span>
+                        </div>
+                    </div>
+
+                    <a href="#" id="download-pdf" class="btn btn-download">
+                        ⬇ BAIXAR.pdf
+                    </a>
                 </div>
             </div>
         </div>
 
         <!-- Seção Experiência -->
-        <div id="experiencia" class="section">
-            <h2>Experiência</h2>
+        <div id="experiencia" class="section reveal">
+            <h2>Experiência Profissional</h2>
+
             <div class="experience-item">
-                <h3>Exército Brasileiro</h3>
-                <p class="date">2017-2025</p>
-                <p>Foram 8 anos atuando na área de comunicações, responsável pela programação e gerenciamento de rádios e outros equipamentos Motorola Solutions, além do monitoramento do sistema Master Site em Brasília, empregado em diversas operações pelo Brasil.</p>
+                <h3>Especialista em Comunicações Críticas — Exército Brasileiro</h3>
+                <p style="color: var(--tech-accent); font-weight: bold; margin-bottom: 5px;">Companhia de Comando e Controle</p>
+                <p class="date" style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">Março 2017 - Fevereiro 2025</p>
+                
+                <p style="margin-bottom: 15px;">Atuação por 8 anos na Pioneira da Proteção Cibernética Tática, com progressão do Pelotão de Comando e Apoio até o 2º Pelotão de Comando e Controle, acumulando funções de alta responsabilidade técnica e logística.</p>
+
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="margin-bottom: 12px; padding-left: 20px; position: relative;">
+                        <span style="position: absolute; left: 0; color: var(--tech-accent);">▹</span>
+                        <strong>Sistemas de Comunicação e Infraestrutura:</strong> Elevada competência técnica na configuração, montagem e operação de sistemas de comunicações críticas, incluindo terminais satelitais e administração de redes de rádios da família Motorola.
+                    </li>
+                    <li style="margin-bottom: 12px; padding-left: 20px; position: relative;">
+                        <span style="position: absolute; left: 0; color: var(--tech-accent);">▹</span>
+                        <strong>Atuação em Missões Críticas:</strong> Operação de sistemas de rádio e TI em operações militares de grande envergadura em todo o território nacional (ex: Operações Formosa, Guararapes, Escudo Antiaéreo e Roraima), garantindo estabilidade sob alta pressão.
+                    </li>
+                    <li style="margin-bottom: 12px; padding-left: 20px; position: relative;">
+                        <span style="position: absolute; left: 0; color: var(--tech-accent);">▹</span>
+                        <strong>Gestão e Organização:</strong> Responsável pelo auxílio na gerência e organização de material técnico (Classe VII) do pelotão, destacando-se pela proatividade, meticulosidade e capacidade de adaptação.
+                    </li>
+                    <li style="margin-bottom: 12px; padding-left: 20px; position: relative;">
+                        <span style="position: absolute; left: 0; color: var(--tech-accent);">▹</span>
+                        <strong>Aprimoramento em Tecnologia:</strong> Foco em transição para o setor de TI ao longo da carreira militar, concluindo capacitações em Segurança da Informação (Bradesco) e Desenvolvimento Front-End (SENAI) ainda durante o tempo de serviço.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Seção Reconhecimentos & Credenciais -->
+        <div id="reconhecimentos" class="section reveal">
+            <h2>Reconhecimentos & Credenciais</h2>
+            <p style="margin-bottom: 25px; color: var(--text-muted);">Comprovações oficiais de desempenho, liderança e excelência técnica durante 8 anos de atuação em operações de missão crítica.</p>
+            
+            <div class="awards-grid">
+                <div class="award-item">
+                    <div class="award-icon">📄</div>
+                    <h3>Carta de Recomendação</h3>
+                    <p>Atestado oficial de conduta, capacidade de trabalho em equipe e habilidades de resolução de problemas.</p>
+                    <a href="img/WhatsApp Image 2026-02-19 at 13.04.54.jpeg" target="_blank" class="btn btn-sm">Abrir Documento</a>
+                </div>
+
+                <div class="award-item">
+                    <div class="award-icon">🎖️</div>
+                    <h3>Referência Elogiosa</h3>
+                    <p>Reconhecimento formal por dedicação excepcional, proatividade e domínio técnico em comunicações.</p>
+                    <div style="width: 100%; display: flex; flex-direction: column; gap: 10px;">
+                        <a href="img/WhatsApp Image 2026-02-19 at 13.04.54 (2).jpeg" target="_blank" class="btn btn-sm">Abrir Parte 1</a>
+                        <a href="img/WhatsApp Image 2026-02-19 at 13.04.56.jpeg" target="_blank" class="btn btn-sm">Abrir Parte 2</a>
+                    </div>
+                </div>
+
+                <div class="award-item">
+                    <div class="award-icon">🏅</div>
+                    <h3>Diploma de Mérito</h3>
+                    <p>Condecoração concedida por entregas acima do esperado e manutenção de sistemas de alto nível.</p>
+                    <a href="img/WhatsApp Image 2026-02-19 at 13.04.54 (1).jpeg" target="_blank" class="btn btn-sm">Abrir Documento</a>
+                </div>
             </div>
         </div>
 
         <!-- Seção Habilidades -->
-        <div id="habilidades" class="section">
+        <div id="habilidades" class="section reveal">
             <h2>Habilidades</h2>
-            <ul class="skills">
-                <li>
-                    <div class="skill-item">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML">
-                        <span>HTML</span>
+            
+            <!-- Blocos de Habilidades Categorizados -->
+            <div class="skills-categories-grid">
+                <!-- Front-End -->
+                <div class="skill-category">
+                    <h3>💻 Desenvolvimento Front-End</h3>
+                    <div class="tags">
+                        <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"> HTML5</span>
+                        <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"> CSS3</span>
+                        <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"> JavaScript</span>
+                        <span>📱 Responsividade</span>
                     </div>
-                </li>
-                <li>
-                    <div class="skill-item">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS">
-                        <span>CSS</span>
+                </div>
+
+                <!-- Dados & Automação -->
+                <div class="skill-category">
+                    <h3>📊 Dados & Automação</h3>
+                    <div class="tags">
+                        <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"> Python</span>
+                        <span><img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Microsoft_Excel_2013-2019_logo.svg" alt="Excel"> Excel</span>
+                        <span><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI"> Power BI</span>
+                        <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"> SQL (PostgreSQL)</span>
                     </div>
-                </li>
-                <li>
-                    <div class="skill-item">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript">
-                        <span>JavaScript</span>
+                </div>
+
+                <!-- Infraestrutura (Diferencial Militar) -->
+                <div class="skill-category">
+                    <h3>📡 Infraestrutura & Redes</h3>
+                    <div class="tags">
+                        <span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Motorola_Blue_M_Logo.svg/120px-Motorola_Blue_M_Logo.svg.png" alt="Motorola"> Sistemas Motorola (ASTRO 25)</span>
+                        <span>📡 Radiofrequência</span>
+                        <span>🛰️ Redes Satelitais</span>
+                        <span>📋 Monitoramento de Logs</span>
                     </div>
-                </li>
-            </ul>
+                </div>
+
+                <!-- Ferramentas & Soft Skills -->
+                <div class="skill-category">
+                    <h3>🛠️ Ferramentas & Soft Skills</h3>
+                    <div class="tags">
+                        <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"> Git & GitHub</span>
+                        <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"> VS Code</span>
+                        <span class="highlight">Resiliência</span>
+                        <span class="highlight">Foco sob Pressão</span>
+                        <span class="highlight">Liderança Técnica</span>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="lang-title">Idiomas</h3>
+            <div class="languages-grid">
+                <div class="language-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg" alt="Espanha" class="flag-icon">
+                    <div>
+                        <h4>Espanhol</h4>
+                        <p>A1 (Em Desenvolvimento)</p>
+                    </div>
+                </div>
+                <div class="language-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" alt="EUA" class="flag-icon">
+                    <div>
+                        <h4>Inglês</h4>
+                        <p>A1 (Estudando Ativamente)</p>
+                    </div>
+                </div>
+                <div class="language-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg" alt="Itália" class="flag-icon">
+                    <div>
+                        <h4>Italiano</h4>
+                        <p>A1 (Em Desenvolvimento)</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Seção Cursos -->
-        <div id="cursos" class="section">
+        <div id="cursos" class="section reveal">
             <h2>Cursos</h2>
             <div class="course-category">
                 <h3>Formação Acadêmica</h3>
@@ -91,11 +223,11 @@
                 </ul>
             </div>
             <div class="course-category">
-                <h3>Desenvolvimento</h3>
+                <h3>Desenvolvimento & Tecnologia</h3>
                 <ul>
-                    <li>Desenvolvimento Front End</li>
-                    <li>Segurança da Informação</li>
-                    <li>Fundamentos de Redes de Computadores</li>
+                    <li>💻 <strong>Desenvolvedor Front-end</strong> — SENAI (Dez 2024)</li>
+                    <li>🔒 <strong>Segurança da Informação</strong> — Bradesco (Set 2024)</li>
+                    <li>🐍 <strong>Python e Automação de Processos</strong> — (2024)</li>
                 </ul>
             </div>
             <div class="course-category">
@@ -112,20 +244,37 @@
         </div>
 
         <!-- Seção Projetos -->
-        <div id="projetos" class="section">
+        <div id="projetos" class="section reveal">
             <h2>Projetos</h2>
-            <div class="project">
-                <h3>Site Para Comunidade do Jogo MSF</h3>
-                <p>Desenvolvi este portfólio para demonstrar minhas habilidades em HTML, CSS e JavaScript.</p>
-                <p><strong>Tecnologias:</strong> HTML, CSS, JavaScript</p>
-                <a href="https://mayconjr1025.github.io/NEW-ASGARD-BRAZIL/" target="_blank" class="btn">Ver Projeto</a>
+            
+            <div class="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
+                
+                <div class="project-card" style="background: var(--bg-base); border: 1px solid var(--card-border); border-radius: 6px; padding: 20px; transition: var(--transition);">
+                    <h3 style="color: var(--tech-accent); margin-bottom: 10px;">Site Comunidade MSF</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 15px;">Plataforma desenvolvida para a comunidade de Marvel Strike Force (MSF). O site auxilia os jogadores com informações estratégicas e guias de evolução .</p>
+                    <p style="font-size: 0.85rem; margin-bottom: 15px;"><strong>Tecnologias:</strong> HTML, CSS, JavaScript</p>
+                    <a href="https://valadaoworldtour.github.io/NEW-ASGARD-BRAZIL/" target="_blank" class="btn btn-sm">Ver Projeto</a>
+                </div>
+
+               
+                <div class="project-card" style="background: var(--bg-base); border: 1px solid var(--card-border); border-radius: 6px; padding: 20px; transition: var(--transition);">
+                    <h3 style="color: var(--tech-accent); margin-bottom: 10px;">Valadão World Tour</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 15px;">Interface web para um sistema de planejamento e roteiros de viagens. Foco na criação de um layout fluido, responsivo e com boa experiência de usuário (UX).</p>
+                    <p style="font-size: 0.85rem; margin-bottom: 15px;"><strong>Tecnologias:</strong> HTML, CSS, JavaScript</p>
+                    <a href="https://valad-oworldtour.onrender.com" target="_blank" class="btn btn-sm">Em Desenvolvimento</a>
+                </div>
+
             </div>
-        </div>    
+        </div>
 
         <!-- Seção Redes Sociais -->
-        <div id="redes-sociais" class="section">
+        <div id="redes-sociais" class="section reveal">
             <h2>Redes Sociais</h2>
             <div class="social-links">
+                <a href="https://github.com/valadaoworldtour" target="_blank" class="social-link">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                    <span>GitHub</span>
+                </a>
                 <a href="https://www.linkedin.com/in/maiconjunior" target="_blank" class="social-link">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
                     <span>LinkedIn</span>
@@ -141,69 +290,80 @@
             </div>
         </div>
 
-        <!-- Seção Contato -->
-        <div id="contato" class="section">
-            <h2>Contato</h2>
-            <ul class="contact-info">
-                <li>&#9742; (61) 98280-1931</li>
-                <li>&#9993; mayconjunior576@gmail.com</li>
-                <li>&#127970; Planaltina-GO</li>
-            </ul>
-        </div>
+        <!-- Seção Contato Unificada -->
+        <div id="contato" class="section reveal">
+            <h2>Entre em Contato</h2>
+            
+            <div class="contact-grid">
+                <!-- Coluna da Esquerda: Informações -->
+                <div class="contact-info-column">
+                    <p style="margin-bottom: 25px; color: var(--text-muted);">Estou disponível para novos projetos e oportunidades. Sinta-se à vontade para entrar em contato!</p>
+                    
+                    <ul class="contact-list">
+                        <li>
+                            <span class="icon">📞</span>
+                            <a href="tel:+5561982801931">(61) 98280-1931</a>
+                        </li>
+                        <li>
+                            <span class="icon">📧</span>
+                            <a href="mailto:mayconjunior576@gmail.com">mayconjunior576@gmail.com</a>
+                        </li>
+                        <li>
+                            <span class="icon">📍</span>
+                            <span>Planaltina-GO</span>
+                        </li>
+                    </ul>
+                </div>
 
-        <!-- Formulário de Contato -->
-        <div id="entre-em-contato" class="section">
-            <h2>Entre em Contato</h2>               
-            <form action="https://formspree.io/f/{sua-chave}" method="POST">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-                
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-                
-                <button type="submit" class="btn">Enviar</button>
-            </form>
-        </div>   
+                <!-- Coluna da Direita: Formulário -->
+                <div class="contact-form-column">
+                    <form id="contactForm" action="https://formspree.io/f/mojnneez" method="POST">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Como posso ajudar?" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width: 100%;">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
     </div>
 
     <!-- Rodapé -->
     <footer>
-        <p>© 2025 Maicon Junior. Todos os direitos reservados.</p>
+        <div class="footer-content">
+            <div class="footer-social">
+                <a href="https://github.com/valadaoworldtour" target="_blank" aria-label="GitHub">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/maiconjunior" target="_blank" aria-label="LinkedIn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+                </a>
+            </div>
+            <p>&copy; <span id="current-year"></span> Maicon Junior. Todos os direitos reservados.</p>
+            <p class="footer-tagline">Construído com HTML, CSS e JS.</p>
+        </div>
     </footer>
 
     <!-- Botão de Voltar ao Topo -->
-    <button id="topBtn" onclick="scrollToTop()">⬆ Voltar ao Topo</button>
+    <button id="topBtn" onclick="scrollToTop()" title="Voltar ao Topo">▲</button>
 
     <!-- Scripts -->
-    <script>
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        window.onscroll = function () {
-            document.getElementById('topBtn').style.display =
-                window.scrollY > 200 ? 'block' : 'none';
-                
-            const links = document.querySelectorAll("nav a");
-            let current = "";
-            
-            document.querySelectorAll(".section").forEach((section) => {
-                const sectionTop = section.offsetTop - 50;
-                if (pageYOffset >= sectionTop) {
-                    current = section.getAttribute("id");
-                }
-            });
-            
-            links.forEach((link) => {
-                link.classList.remove("active");
-                if (link.getAttribute("href") === `#${current}`) {
-                    link.classList.add("active");
-                }
-            });
-        };
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.0.6/tsparticles.slim.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
 </body>
 </html>
