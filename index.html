@@ -14,6 +14,57 @@
     <!-- Favicon: Logo Geométrico MJ (Hexágono High-Tech) -->
     <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon points="50 5, 95 25, 95 75, 50 95, 5 75, 5 25" stroke="%2300e5ff" stroke-width="5" fill="none"/><text x="50" y="65" font-size="40" text-anchor="middle" fill="%236200ea" font-family="sans-serif" font-weight="bold">MJ</text></svg>' type="image/svg+xml">
     <link rel="stylesheet" href="style3.css">
+    <style>
+        /* Ajustes Específicos para Mobile (Telas menores que 768px) */
+        @media (max-width: 768px) {
+            /* 1. Navegação: Alinhamento vertical, centralizado e organizado */
+            header {
+                padding-bottom: 15px;
+            }
+            header nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            header nav a {
+                width: 80%; /* Largura ideal para toque */
+                text-align: center;
+                padding: 10px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Divisória sutil */
+            }
+
+            /* 2. Reconhecimentos: Redução de tamanho para economizar espaço */
+            #reconhecimentos h2 {
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+            }
+            .award-item {
+                padding: 15px; /* Menos "gordura" interna */
+                margin-bottom: 15px;
+            }
+            .award-item h3 {
+                font-size: 1.1rem; /* Título menor */
+            }
+
+            /* 3. Idiomas: Correção para texto não sair do quadrado */
+            .language-item {
+                width: 100%;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+            }
+            .language-item div {
+                flex: 1; /* Ocupa o espaço restante */
+                min-width: 0; /* Permite que o texto quebre linha se for longo */
+                padding-right: 5px;
+            }
+            .language-item h4, .language-item p {
+                word-wrap: break-word; /* Força quebra de palavra se necessário */
+                white-space: normal; /* Permite múltiplas linhas */
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="tsparticles"></div>
@@ -49,9 +100,9 @@
                         <span class="pulse-dot"></span> Disponível para oportunidades
                     </div>
 
-                    <p>Olá! Sou Maicon Junior. Trago na bagagem 8 anos de experiência com tecnologia e comunicações críticas, atuando diretamente no monitoramento de sistemas complexos. Essa vivência me ensinou a ter resiliência, raciocínio lógico afiado e foco absoluto na resolução de problemas sob pressão.</p>
+                    <p>Olá! Sou Maicon Junior. Durante 8 anos, atuei no Exército Brasileiro com tecnologia e comunicações críticas, garantindo o funcionamento de sistemas complexos em operações reais. Essa vivência me ensinou, na prática, o verdadeiro valor da resiliência, do raciocínio lógico afiado e da resolução de problemas sob alta pressão.</p>
                     
-                    <p>Hoje, canalizo toda essa disciplina para o <strong>Desenvolvimento de Software e Análise de Dados</strong>. Minha atuação é multidisciplinar: crio interfaces web fluidas (HTML, CSS, JS), desenvolvo lógicas de back-end e automações (Python) e transformo informações em insights estratégicos (Excel, Power BI). Sou apaixonado por conectar linhas de código e dados para construir soluções completas.</p>
+                    <p>Hoje, canalizo toda essa disciplina militar para a minha jornada no desenvolvimento de software. Tenho construído projetos práticos focados em Front-end (HTML, CSS e JS) e explorado a área de dados e automações (Python, Excel e Power BI). Busco sempre aliar a visão estratégica que desenvolvi à programação para entregar soluções funcionais, com muita humildade para aprender, evoluir e agregar à equipe.</p>
                     
                     <div class="quick-stats">
                         <div class="stat-item">
@@ -159,7 +210,6 @@
                         <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"> Python</span>
                         <span><img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Microsoft_Excel_2013-2019_logo.svg" alt="Excel"> Excel</span>
                         <span><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI"> Power BI</span>
-                        <span><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"> SQL (PostgreSQL)</span>
                     </div>
                 </div>
 
@@ -167,7 +217,7 @@
                 <div class="skill-category">
                     <h3>📡 Infraestrutura & Redes</h3>
                     <div class="tags">
-                        <span><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Motorola_Blue_M_Logo.svg/120px-Motorola_Blue_M_Logo.svg.png" alt="Motorola"> Sistemas Motorola (ASTRO 25)</span>
+                        <span><img src="https://logotaglines.com/wp-content/uploads/2017/08/Motorola-Logo.jpg" alt="Motorola"> Sistemas Motorola (ASTRO 25)</span>
                         <span>📡 Radiofrequência</span>
                         <span>🛰️ Redes Satelitais</span>
                         <span>📋 Monitoramento de Logs</span>
@@ -231,7 +281,7 @@
                 </ul>
             </div>
             <div class="course-category">
-                <h3><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Motorola_Solutions_Logo.svg/330px-Motorola_Solutions_Logo.svg.png" alt="Motorola Solutions" width="20"> Motorola Solutions</h3>
+                <h3>Motorola Solutions <span style="display: block; font-size: 0.8rem; color: var(--text-muted); font-weight: normal; margin-top: 4px; font-style: italic;"></span></h3>
                 <ul>
                     <li>Operações e Administração do Intelligent Middleware (IMW)</li>
                     <li>Workshop Administrador do Sistema de Rádio ASTRO® 25 IV&D</li>
