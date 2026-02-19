@@ -595,6 +595,20 @@ body.generating-pdf * {
     color: #000000 !important; /* Garante texto preto para leitura perfeita */
 }
 
+/* Força todas as animações de scroll a ficarem visíveis no PDF */
+body.generating-pdf .reveal {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: none !important;
+    animation: none !important;
+}
+
+/* Garante que o container principal expanda totalmente */
+body.generating-pdf #portfolio-content {
+    height: auto !important;
+    overflow: visible !important;
+}
+
 /* =========================================
    SEÇÃO DE RECONHECIMENTOS (AWARDS)
    ========================================= */

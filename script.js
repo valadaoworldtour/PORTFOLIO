@@ -126,10 +126,10 @@ if (downloadBtn) {
 
         const element = document.getElementById('portfolio-content');
         const opt = {
-            margin:       [0, 0, 0, 0], // Margens zero
+            margin:       0.2, // Margem pequena para evitar cortes
             filename:     'Curriculo_Maicon_Junior.pdf',
             image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { scale: 2, useCORS: true, scrollY: 0, letterRendering: true }, 
+            html2canvas:  { scale: 2, useCORS: true, scrollY: 0, letterRendering: true, windowHeight: element.scrollHeight }, 
             jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
         };
 
