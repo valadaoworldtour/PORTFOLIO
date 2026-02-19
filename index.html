@@ -23,12 +23,13 @@
             }
             header nav {
                 display: flex;
-                flex-direction: column;
-                align-items: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
                 gap: 10px;
             }
             header nav a {
-                width: 80%; /* Largura ideal para toque */
+                width: 45%; /* Ajuste para 2 colunas */
                 text-align: center;
                 padding: 10px 0;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Divisória sutil */
@@ -48,6 +49,9 @@
             }
 
             /* 3. Idiomas: Correção para texto não sair do quadrado */
+            .languages-grid {
+                flex-direction: column;
+            }
             .language-item {
                 width: 100%;
                 box-sizing: border-box;
