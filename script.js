@@ -123,35 +123,54 @@ if (downloadBtn) {
 
         // 2. Ativar Modo PDF (Simplifica CSS para evitar erros de renderização)
         document.body.classList.add('generating-pdf');
+        window.scrollTo(0, 0); // Garante que começa do topo
+
+        // Força bruta: Garante que todos os elementos animados estejam visíveis
+        const reveals = document.querySelectorAll('.reveal');
+        reveals.forEach(el => {
+            el.classList.add('active');
+            el.style.opacity = '1';
+            el.style.transform = 'none';
+            el.style.transition = 'none';
+        });
 
         const element = document.getElementById('portfolio-content');
-        const opt = {
-            margin:       0.2, // Margem pequena para evitar cortes
-            filename:     'Curriculo_Maicon_Junior.pdf',
-            image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { scale: 2, useCORS: true, scrollY: 0, letterRendering: true, windowHeight: element.scrollHeight }, 
-            jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
-        };
+        
+        // Aguarda 1 segundo para o navegador renderizar tudo antes de capturar
+        setTimeout(() => {
+            const opt = {
+                margin:       0.2, 
+                filename:     'Curriculo_Maicon_Junior.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2, useCORS: true, scrollY: 0, letterRendering: true, windowHeight: element.scrollHeight }, 
+                jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+            };
 
-        // Gera o PDF
-        html2pdf().set(opt).from(element).save()
-            .then(() => {
-                // Sucesso: Restaura o site ao normal
-                document.body.classList.remove('generating-pdf');
-                downloadBtn.innerHTML = originalText;
-                downloadBtn.style.pointerEvents = "auto";
-            })
-            .catch(err => {
-                // Erro: Mostra aviso no botão
-                console.error("Erro ao gerar PDF:", err);
-                document.body.classList.remove('generating-pdf'); // Restaura mesmo com erro
-                downloadBtn.innerHTML = "❌ Erro (Tente no PC)";
-                
-                setTimeout(() => {
+            // Gera o PDF
+            html2pdf().set(opt).from(element).save()
+                .then(() => {
+                    // Sucesso: Restaura o site
+                    document.body.classList.remove('generating-pdf');
+                    // Limpa estilos inline
+                    reveals.forEach(el => {
+                        el.style.opacity = '';
+                        el.style.transform = '';
+                        el.style.transition = '';
+                    });
                     downloadBtn.innerHTML = originalText;
                     downloadBtn.style.pointerEvents = "auto";
-                }, 3000);
-            });
+                })
+                .catch(err => {
+                    console.error("Erro ao gerar PDF:", err);
+                    document.body.classList.remove('generating-pdf');
+                    downloadBtn.innerHTML = "❌ Erro (Tente no PC)";
+                    
+                    setTimeout(() => {
+                        downloadBtn.innerHTML = originalText;
+                        downloadBtn.style.pointerEvents = "auto";
+                    }, 3000);
+                });
+        }, 1000);
     });
 }
 
